@@ -1,0 +1,338 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+/* Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Variables */
+:root {
+    /* Colors */
+    --BG-PAGE: #1d1d1d;
+    --BG-WEATHER-APP: linear-gradient(to bottom, #385DA6, #5A90BF, #91D7F2, #94E9F2);
+    --BG-APP-BOTTOM-CONTAINERS: #5A90BF;
+    --DIVISION-BAR: whitesmoke;
+    --TEXT-BOTTOM-CONTAINERS: white;
+    --TEXT-OUTOF-CONTAINERS: white;
+
+    /* Font-Weight */
+    --HEAVY-FONT: 700;
+    --LIGHT-FONT: 400;
+    --NORMAL-FONT: 500;
+
+    /* border radius */
+    --BOTTOM-CONTAINERS-RADIUS: 18PX;
+}
+
+
+/* General Config */
+
+body {
+    font-family: 'poppins', 'sans-serif';
+    background-color: var(--BG-PAGE);
+    color: whitesmoke;
+    font-size: 1.1rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.whole-app-container {
+    background-image: var(--BG-WEATHER-APP);
+    color: var(--TEXT-OUTOF-CONTAINERS);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 15px;
+    padding-bottom: 15px;
+}
+
+
+
+
+/* ================================================ */
+
+
+/* Search Bar Section */
+
+/* .location-search-bar-wrapper {
+    margin-top: 5px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+}
+
+.search-bar {
+    min-width: 10px;
+    width: 540px;
+    height: 43px;
+    font-size: 1.2rem;
+    padding-left: 25px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+    outline-style: none;
+}
+input::placeholder {
+    color: rgba(255, 255, 255, 0.807);
+};
+
+.search-icon-container {
+    z-index: 1;
+}
+.search-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-right: 0px;
+    margin-left: 6px;
+    z-index: 1;
+} */
+
+
+
+/* ================================================ */
+
+
+/* MAIN INFO SECTION */
+
+/* Location and Date */
+.current-location {
+    margin-top: 3rem;
+    font-weight: var(--HEAVY-FONT);
+    letter-spacing: 0.5px;
+}
+
+.date {
+    font-size: 1.12rem;
+    margin-top: 0.5rem;
+    display: flex;
+    column-gap: 0.3rem;
+    align-items: center;
+    font-weight: var(--NORMAL-FONT);
+}
+
+.hour {
+    margin-left: 5px;
+    font-size: 1.18rem;
+}
+
+.am-pm {
+    text-transform: lowercase;
+}
+
+
+/* Current Temperature  */
+.Current-weather-Container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 0.5rem;
+    margin-block: 0.5rem;
+}
+
+.Current-weather-Container i {
+    font-size: 3.5rem;
+    display: grid;
+    place-content: center;
+}
+
+.current-temperature {
+    font-size: 5.5rem;
+    display: grid;
+    place-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.main-additional-info {
+    display: flex;
+    column-gap: 0.5rem;
+    font-weight: var(--NORMAL-FONT);
+    font-size: 1.2rem;
+}
+.feels-like {
+    font-size: 1.30rem;
+}
+.weather-state {
+    margin-top: 0.5rem;
+    grid-column-end: 3;
+    display: grid;
+    place-content: center;
+    font-weight: var(--NORMAL-FONT);
+    font-size: 1.05rem;
+}
+.min-max {
+    margin-top: 4.5rem;
+    font-weight: var(--LIGHT-FONT);
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    column-gap: 0.7rem;
+    padding-right: 5%;
+}
+
+
+
+
+/* ================================================== */
+
+
+
+/* BOTTOM INFO */
+
+/* Precipitation and UV index */
+.Precipitation-UV-container {
+    border: 1px solid var(--BG-APP-BOTTOM-CONTAINERS);
+    border-radius: var(--BOTTOM-CONTAINERS-RADIUS);
+    background-color: var(--BG-APP-BOTTOM-CONTAINERS);
+    width: 100%;
+    height: 120px;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    column-gap: 5%;
+    align-items: center;
+    font-weight: var(--LIGHT-FONT);
+    color: var(--TEXT-BOTTOM-CONTAINERS)
+}
+.Precipitation-UV-container i {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+}
+.Precipitation-UV-container p {
+    display: grid;
+    grid-template-columns: 2fr;
+}
+
+.Precipitation-side {
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: center;
+}
+.UV-side {
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: center;
+}
+.division-bar {
+    background-color: var(--DIVISION-BAR);
+    border-radius: 15px;
+    width: 3px;
+    height: 80px;
+}
+
+
+
+/* ================================================= */
+
+
+/* Hourly climate info */
+.temp-hourly-container {
+    border: 1px solid var(--BG-APP-BOTTOM-CONTAINERS);
+    background-color: var(--BG-APP-BOTTOM-CONTAINERS);
+    border-radius: var(--BOTTOM-CONTAINERS-RADIUS);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    height: 300px;
+    position: relative;
+    color: var(--TEXT-BOTTOM-CONTAINERS);
+}
+.hourly-word {
+    position: relative;
+    bottom: 29px;
+    left: 15px;
+    font-weight: var(--LIGHT-FONT);
+    color: var(--TEXT-OUTOF-CONTAINERS);
+}
+.hour-bottom-container {
+    display: flex;
+    justify-content: space-around;
+    font-weight: var(--NORMAL-FONT);
+}
+.hour-bottom-container p {
+    display: flex;
+    justify-content: center;
+    text-transform: lowercase;
+    font-size: 1.05rem;
+}
+.icons-bottom-wrapper {
+    display: flex;
+    justify-content: space-around;
+    height: 245px;
+    font-weight: var(--LIGHT-FONT);
+}
+
+
+.temp-icon-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80px;
+}
+.icon-box{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icon-box i {
+    font-size: 2rem;
+}
+.icon-box p {
+    font-size: 0.9rem;
+}
+.temp-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    height: 100px;
+    margin-bottom: 15px;
+}
+.bar {
+    width: 5px;
+    /* height: 25px; */
+    border-radius: 5px;
+    background-color: var(--TEXT-BOTTOM-CONTAINERS);
+}
+
+/* HOW TO CENTER AN ABSOLUTE ELEMENT
+   bottom: 8px;
+   left: 50%;
+   transform: translatex(-50%); */
+
+
+/* ================================================= */
+
+@media screen and (min-width: 450px) {
+    .Precipitation-UV-container {
+        column-gap: 12%;
+    }
+}

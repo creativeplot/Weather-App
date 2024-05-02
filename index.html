@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="creative">
+    <meta name="description" content="this is a simple weather app">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="icon" href="Images/5729392_cloudy_sunny_weather_cloud_forecast_icon.png">
+</head>
+<body>
+    <!-- <h1>Weather App</h1> -->
+    <div class="whole-app-container">
+
+        <p class="current-location">
+            <i class="ri-map-pin-2-fill"></i>
+            Diadema
+        </p>
+
+        <div class="date">
+            <p class="day-name">-</p>
+            <p class="day-number">-</p>
+            <p class="month">-</p>
+            <p class="hour">-</p>
+            <p class="am-pm">-</p>
+        </div>
+
+        <div class="Current-weather-Container">
+            <i id="main-icon" class="ri-sun-cloudy-fill"></i>
+            <p class="current-temperature"></p>
+        </div>
+
+        <div class="main-additional-info">
+            <p>Feels Like &nbsp;<span class="feels-like"></span></p>
+        </div>
+        <p class="weather-state"></p>
+
+        <div class="min-max">
+            <p>min <span class="min-temp">-</span></p>
+            <p>|</p>
+            <p>max <span class="max-temp">-</span></p>
+        </div>
+
+        <div class="Precipitation-UV-container">
+
+            <div class="Precipitation-side">
+                <i class="ri-water-percent-fill"></i>
+                    <p>
+                        Precipitation
+                        <span class="precipitation-probabi">10%</span>
+                    </p>
+            </div>
+
+            <div class="division-bar"></div>
+
+            <div class="UV-side">
+                <i class="ri-sun-fill"></i>
+                <p>
+                    UV Index
+                    <span class="uv-index-level"></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="temp-hourly-container">
+
+            <p class="hourly-word">Hourly</p>
+
+            <div class="hour-bottom-container">
+                <p>
+                    <!-- 8:30
+                    <span>am</span> -->
+                </p>
+                <p>
+                    <!-- 11:30
+                    <span>am</span> -->
+                </p>
+                <p>
+                    <!-- 2:30
+                    <span>pm</span> -->
+                </p>
+                <p>
+                    <!-- 5:30
+                    <span>pm</span> -->
+                </p>
+            </div>
+
+            <div class="icons-bottom-wrapper">
+
+                <div class="temp-icon-box">
+
+                    <div class="icon-box">
+                        <i id="icon-bottom" class=""></i>
+                        <p class="rain-prob"></p>
+                    </div>
+
+                    <div class="temp-box">
+                        <p class="temp-values tb1">25°</p>
+                        <div class="bar first-bar"></div>
+                    </div>
+
+                </div>
+
+                <div class="temp-icon-box">
+
+                    <div class="icon-box">
+                        <i id="icon-bottom2" class=""></i>
+                        <p class="rain-prob2"></p>
+                    </div>
+
+                    <div class="temp-box">
+                        <p class="temp-values tb2">22°</p>
+                        <div class="bar second-bar"></div>
+                    </div>
+
+                </div>
+
+                <div class="temp-icon-box">
+
+                    <div class="icon-box">
+                        <i id="icon-bottom3" class=""></i>
+                        <p class="rain-prob3"3></p>
+                    </div>
+
+                    <div class="temp-box">
+                        <p class="temp-values tb3">20°</p>
+                        <div class="bar third-bar"></div>
+                    </div>
+
+                </div>
+
+                <div class="temp-icon-box">
+
+                    <div class="icon-box">
+                        <i id="icon-bottom4" class=""></i>
+                        <p class="rain-prob4"></p>
+                    </div>
+
+                    <div class="temp-box">
+                        <p class="temp-values tb4">15°</p>
+                        <div class="bar fourth-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- optional <canvas></canvas> to give a nice effect on the background-->
+</body>
+</html>
