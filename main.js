@@ -1129,7 +1129,6 @@ async function wheaterInfoAssignment() {
         return heightArray;
     }
     const valuesFromArray = getValues();
-    console.log(valuesFromArray);
 
 
     // applying dynamic hights to the page apperance
@@ -1144,7 +1143,7 @@ async function wheaterInfoAssignment() {
 }
 wheaterInfoAssignment()
 
-// setInterval(wheaterInfoAssignment, 500)
+setInterval(wheaterInfoAssignment, 500)
 
 
 
