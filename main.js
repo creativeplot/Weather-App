@@ -1013,7 +1013,7 @@ async function wheaterInfoAssignment() {
 
         } else {
             // adding 20 to temperature values so it can be used as height for temp bars on the page
-            return heights + 20
+            return heights + 15
         }
     });
 
@@ -1049,10 +1049,67 @@ async function wheaterInfoAssignment() {
             return 15
 
         } else if (diff === 4) {
+            return 20
+
+        } else if (diff === 5) {
             return 25
 
-        } else if (diff >= 5) {
+        }else if (diff === 6){
+            return 30
+
+        }else if (diff === 7){
             return 35
+
+        } else if (diff === 8){
+            return 40
+
+        } else if (diff === 9){
+            return 45
+
+        } else if(diff === 10) {
+            return 50
+
+        } else if (diff === 11) {
+            return 55
+
+        } else if (diff === 12) {
+            return 60
+
+        } else if (diff === 13) {
+            return 65
+
+        }else if (diff === 14) {
+            return 70
+
+        }else if (diff === 15) {
+            return 75
+
+        }else if (diff === 16) {
+            return 80
+
+        }else if (diff === 17) {
+            return 85
+
+        }else if (diff === 18) {
+            return 90
+
+        }else if (diff === 19) {
+            return 95
+
+        }else if (diff === 20) {
+            return 100
+
+        }else if (diff === 21) {
+            return 105
+
+        }else if (diff === 21) {
+            return 110
+
+        }else if (diff === 21) {
+            return 115
+
+        }else if (diff >= 21) {
+            return 120
         }else {
             return 0
         }
@@ -1072,6 +1129,7 @@ async function wheaterInfoAssignment() {
         return heightArray;
     }
     const valuesFromArray = getValues();
+    console.log(valuesFromArray);
 
 
     // applying dynamic hights to the page apperance
@@ -1086,7 +1144,7 @@ async function wheaterInfoAssignment() {
 }
 wheaterInfoAssignment()
 
-setInterval(wheaterInfoAssignment, 500)
+// setInterval(wheaterInfoAssignment, 500)
 
 
 
